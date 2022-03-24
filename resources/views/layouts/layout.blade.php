@@ -19,7 +19,13 @@
                     <h1><span class="red">BolsaDe</span><span class="blue">Empleo</span>RD</h1>
                 </a>
                 <span>
-                    <a href="{{route('newVacante.index')}}" class="btn-publicar">Iniciar Sesión</a>
+                    @auth
+                        <a href="{{route('newVacante.index')}}" class="btn-publicar">Cerrar Sesión</a>
+                    @endauth
+
+                    @guest
+                        <a href="{{route('newVacante.index')}}" class="btn-publicar">Iniciar Sesión</a>
+                    @endguest
                     <a href="{{route('newVacante.index')}}" class="btn-publicar">Publicar vacante</a>
                 </span>
             </div>

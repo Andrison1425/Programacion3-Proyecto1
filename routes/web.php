@@ -21,3 +21,7 @@ Route::post('/insertar-vacante', 'publicarVacante@insert')->name('newVacante.ins
 Route::get('/categoria', 'DetailsController@categoria')->name('vacante.categoria');
 Route::get('/buscar', 'DetailsController@buscar')->name('vacante.buscar');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

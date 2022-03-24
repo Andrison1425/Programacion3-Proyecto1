@@ -33,4 +33,20 @@ class publicarVacante extends Controller
         Vacante::create($request->all());
         return redirect(route('vacante.index'))->with('Notificacion', 'Se ha enviado la solicitud, el administrador va a aprobar o rechazar la vacante sin previo aviso');
     }
+
+    public function show($id) {
+        $vacante=Vacante::findOrFail($id);
+
+        return view('editVacante',[
+            "vacante"=>$vacante,
+        ]);
+    }
+
+    public function edit(Request $request){
+
+        $vacante=Vacante::findOrFail($request->id);
+        $vacante->update($request->all());
+
+        return redirect(route('vacante.index'));
+    }
 }

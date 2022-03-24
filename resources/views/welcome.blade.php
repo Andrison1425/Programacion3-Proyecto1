@@ -43,7 +43,14 @@ Bolsa de empleo RD | Vacantes de trabajo en RD
                 <h5>{{$vacante->ubicacion}}</h5>
             </div>
             <h4>{!!$vacante->nombre_empresa!!}</h4>
-            <a href="{{route('vacante.show',['id'=>$vacante->id])}}" class="btn-publicar">Ver más</a>
+            @auth
+                <a href="{{route('newVacante.show',['id'=>$vacante->id])}}" class="btn-publicar">Editar</a>
+            @endauth
+
+            @guest
+                <a href="{{route('vacante.show',['id'=>$vacante->id])}}" class="btn-publicar">Ver más</a>
+            @endguest
+
         </li>
     @endforeach
 </ul>

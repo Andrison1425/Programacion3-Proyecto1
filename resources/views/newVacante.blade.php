@@ -20,21 +20,6 @@
                 </a>
             <a href="" class="btn-publicar">Publicar vacante</a>
             </div>
-            <div>
-                <div>
-                    <div>
-                        Síguenos
-                    </div>
-
-                    <div>
-                        <a href="https://laravel.com/docs">Facebook</a>
-                        <a href="https://laracasts.com">Instagram</a>
-                        <a href="https://laravel-news.com">Telegram</a>
-                        <a href="https://blog.laravel.com">Whatsapp</a>
-                        <a href="https://nova.laravel.com">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
         </header>
         <main>
             @section('main')

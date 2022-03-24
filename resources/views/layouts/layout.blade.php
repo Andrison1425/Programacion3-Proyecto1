@@ -20,11 +20,14 @@
                 </a>
                 <span>
                     @auth
-                        <a href="{{route('newVacante.index')}}" class="btn-publicar">Cerrar Sesión</a>
+                        <form action="{{route('logout')}}" method="post" style="display:contents">
+                            @csrf
+                            <a class="btn-publicar send">Cerrar Sesión</a>
+                        </form>
                     @endauth
 
                     @guest
-                        <a href="{{route('newVacante.index')}}" class="btn-publicar">Iniciar Sesión</a>
+                        <a href="{{route('login')}}" class="btn-publicar">Iniciar Sesión</a>
                     @endguest
                     <a href="{{route('newVacante.index')}}" class="btn-publicar">Publicar vacante</a>
                 </span>
@@ -38,5 +41,15 @@
         <footer>
             BolsaDeEmpleoRD 2022-Todos los derechos reservados
         </footer>
+
+        <script>
+            let btn=document.querySelector(".send");
+            let form=document.querySelector("form");
+
+            btn.onclick=(e)=>{
+                e.preventDefault();
+                document.querySelector("form").submit();
+            }
+        </script>
     </body>
 </html>

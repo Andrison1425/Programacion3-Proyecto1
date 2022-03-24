@@ -24,6 +24,9 @@ Route::post('/editar-vacante', 'publicarVacante@edit')->name('newVacante.edit');
 Route::get('/categoria', 'DetailsController@categoria')->name('vacante.categoria');
 Route::get('/buscar', 'DetailsController@buscar')->name('vacante.buscar');
 
+Route::get('/categorias', 'DetailsController@categorias')->name('vacante.categorias');
+Route::post('/categorias/{id}', 'DetailsController@editCategoria')->name('vacante.editCategoria');
+Route::post('/categorias/{id}', 'DetailsController@deleteCategoria')->name('vacante.deleteCategoria');
 
 Auth::routes();
 

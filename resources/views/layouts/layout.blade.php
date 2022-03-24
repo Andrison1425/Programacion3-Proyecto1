@@ -20,9 +20,11 @@
                 </a>
                 <span>
                     @auth
+                        <a class="btn-publicar" href="{{route('vacante.categorias')}}" >Gestionar Categorías</a>
+
                         <form action="{{route('logout')}}" method="post" style="display:contents">
                             @csrf
-                            <a class="btn-publicar send">Cerrar Sesión</a>
+                            <a class="btn-publicar send" href="" >Cerrar Sesión</a>
                         </form>
                     @endauth
 

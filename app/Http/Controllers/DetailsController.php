@@ -46,4 +46,16 @@ class DetailsController extends Controller
             "categoria"=>""
         ]);
     }
+
+    public function editCategoria(Request $request){
+
+    }
+
+    public function deleteCategoria(Request $request){
+
+    }
+
+    public function categorias(){
+        return view('categorias');
+    }
 }
